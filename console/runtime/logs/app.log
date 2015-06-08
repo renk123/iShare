@@ -1,0 +1,210 @@
+2015-05-29 08:12:29 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table '`ishare`.`migration`' already exists' in D:\workspace\www\ishare\vendor\yiisoft\yii2\db\Command.php:771
+Stack trace:
+#0 D:\workspace\www\ishare\vendor\yiisoft\yii2\db\Command.php(771): PDOStatement->execute()
+#1 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\controllers\MigrateController.php(147): yii\db\Command->execute()
+#2 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\controllers\MigrateController.php(122): yii\console\controllers\MigrateController->createMigrationHistoryTable()
+#3 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#4 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 D:\workspace\www\ishare\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\workspace\www\ishare\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#9 D:\workspace\www\ishare\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#10 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\Application.php(161): yii\base\Module->runAction('migrate', Array)
+#11 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('migrate', Array)
+#12 D:\workspace\www\ishare\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\workspace\www\ishare\yii(31): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table '`ishare`.`migration`' already exists
+The SQL being executed was: CREATE TABLE `migration` (
+	`version` varchar(180) NOT NULL PRIMARY KEY,
+	`apply_time` int(11)
+)' in D:\workspace\www\ishare\vendor\yiisoft\yii2\db\Schema.php:595
+Stack trace:
+#0 D:\workspace\www\ishare\vendor\yiisoft\yii2\db\Command.php(779): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `m...')
+#1 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\controllers\MigrateController.php(147): yii\db\Command->execute()
+#2 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\controllers\MigrateController.php(122): yii\console\controllers\MigrateController->createMigrationHistoryTable()
+#3 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#4 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 D:\workspace\www\ishare\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\workspace\www\ishare\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#9 D:\workspace\www\ishare\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#10 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\Application.php(161): yii\base\Module->runAction('migrate', Array)
+#11 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('migrate', Array)
+#12 D:\workspace\www\ishare\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\workspace\www\ishare\yii(31): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table '`ishare`.`migration`' already exists
+)
+
+2015-05-29 08:12:29 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator\\AppData\\Roaming'
+    'APR_ICONV_PATH' => 'D:\\Program Files (x86)\\Subversion\\iconv'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'PC201505221206'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'DEVMGR_SHOW_DETAILS' => '1'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator\\AppData\\Local'
+    'LOGONSERVER' => '\\\\PC201505221206'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\tools\\php\\lamp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\EmEditor;D:\\Program Files (x86)\\Subversion\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'PC201505221206'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator'
+    'VBOX_MSI_INSTALL_PATH' => 'D:\\Program Files\\Oracle\\VirtualBox\\'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'YII_PATH' => 'D:\\workspace\\www\\ishare\\'
+    'PHP_SELF' => 'D:\\workspace\\www\\ishare\\yii'
+    'SCRIPT_NAME' => 'D:\\workspace\\www\\ishare\\yii'
+    'SCRIPT_FILENAME' => 'D:\\workspace\\www\\ishare\\yii'
+    'PATH_TRANSLATED' => 'D:\\workspace\\www\\ishare\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1432879949.2037
+    'REQUEST_TIME' => 1432879949
+    'argv' => [
+        0 => 'D:\\workspace\\www\\ishare\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2015-05-29 08:13:56 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1813 Tablespace for table '`ishare`.`migration`' exists. Please DISCARD the tablespace before IMPORT.' in D:\workspace\www\ishare\vendor\yiisoft\yii2\db\Command.php:771
+Stack trace:
+#0 D:\workspace\www\ishare\vendor\yiisoft\yii2\db\Command.php(771): PDOStatement->execute()
+#1 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\controllers\MigrateController.php(147): yii\db\Command->execute()
+#2 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\controllers\MigrateController.php(122): yii\console\controllers\MigrateController->createMigrationHistoryTable()
+#3 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#4 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 D:\workspace\www\ishare\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\workspace\www\ishare\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#9 D:\workspace\www\ishare\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#10 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\Application.php(161): yii\base\Module->runAction('migrate', Array)
+#11 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('migrate', Array)
+#12 D:\workspace\www\ishare\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\workspace\www\ishare\yii(31): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000]: General error: 1813 Tablespace for table '`ishare`.`migration`' exists. Please DISCARD the tablespace before IMPORT.
+The SQL being executed was: CREATE TABLE `migration` (
+	`version` varchar(180) NOT NULL PRIMARY KEY,
+	`apply_time` int(11)
+)' in D:\workspace\www\ishare\vendor\yiisoft\yii2\db\Schema.php:595
+Stack trace:
+#0 D:\workspace\www\ishare\vendor\yiisoft\yii2\db\Command.php(779): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `m...')
+#1 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\controllers\MigrateController.php(147): yii\db\Command->execute()
+#2 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\controllers\MigrateController.php(122): yii\console\controllers\MigrateController->createMigrationHistoryTable()
+#3 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(610): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#4 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 D:\workspace\www\ishare\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\workspace\www\ishare\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\Controller.php(91): yii\base\Controller->runAction('', Array)
+#9 D:\workspace\www\ishare\vendor\yiisoft\yii2\base\Module.php(455): yii\console\Controller->runAction('', Array)
+#10 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\Application.php(161): yii\base\Module->runAction('migrate', Array)
+#11 D:\workspace\www\ishare\vendor\yiisoft\yii2\console\Application.php(137): yii\console\Application->runAction('migrate', Array)
+#12 D:\workspace\www\ishare\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\workspace\www\ishare\yii(31): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1813
+    [2] => Tablespace for table '`ishare`.`migration`' exists. Please DISCARD the tablespace before IMPORT.
+)
+
+2015-05-29 08:13:56 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator\\AppData\\Roaming'
+    'APR_ICONV_PATH' => 'D:\\Program Files (x86)\\Subversion\\iconv'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'PC201505221206'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'DEVMGR_SHOW_DETAILS' => '1'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator\\AppData\\Local'
+    'LOGONSERVER' => '\\\\PC201505221206'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\tools\\php\\lamp\\php;C:\\ProgramData\\ComposerSetup\\bin;D:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\EmEditor;D:\\Program Files (x86)\\Subversion\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'PC201505221206'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator'
+    'VBOX_MSI_INSTALL_PATH' => 'D:\\Program Files\\Oracle\\VirtualBox\\'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'YII_PATH' => 'D:\\workspace\\www\\ishare\\'
+    'PHP_SELF' => 'D:\\workspace\\www\\ishare\\yii'
+    'SCRIPT_NAME' => 'D:\\workspace\\www\\ishare\\yii'
+    'SCRIPT_FILENAME' => 'D:\\workspace\\www\\ishare\\yii'
+    'PATH_TRANSLATED' => 'D:\\workspace\\www\\ishare\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1432880036.5557
+    'REQUEST_TIME' => 1432880036
+    'argv' => [
+        0 => 'D:\\workspace\\www\\ishare\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
